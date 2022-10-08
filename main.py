@@ -9,11 +9,6 @@ import os
 # Lisänä ASCII-art ja muotoilu?
 
 
-
-
-# Ytimien määrä
-# print("Number of CPU cores:", os.cpu_count())
-
 uname = platform.uname()
 print("System:",uname.system,platform.architecture()[0])
 print(f"Hostname: {uname.node}")
