@@ -8,18 +8,18 @@ import os
 
 # Lisänä ASCII-art ja muotoilu?
 
-# Arkkitehtuuri
-print("Architecture: " + platform.architecture()[0])
-
-print("Computer name:",platform.node())
-
-dist = platform.uname()
-dist = " ".join(x for x in dist)
-print("Kernel version:",dist.split(" ")[2])
 
 
-#Ytimien määrä
-print("Number of CPU cores:", os.cpu_count())
 
+# Ytimien määrä
+# print("Number of CPU cores:", os.cpu_count())
+
+uname = platform.uname()
+print("System:",uname.system,platform.architecture()[0])
+print(f"Hostname: {uname.node}")
+print(f"Kernel Release: {uname.release}")
+print(f"Version: {uname.version.split()[0]}")
+print(f"Machine: {uname.machine}")
+print(f"Processor: {uname.processor}","with",os.cpu_count(),"cores")
 
 
